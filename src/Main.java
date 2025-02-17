@@ -7,7 +7,7 @@ public class Main {
         if (age >= 18) {
             System.out.println("Если возраст человека равен " + age +  " лет, то он совершеннолетний");
         }
-        if (age < 18) {
+        else  {
             System.out.println("Если возраст человека равен " + age + " лет, то он не достиг совершеннолетия и ему нужно немного подождать");
         }
         System.out.println("_____");
@@ -19,7 +19,7 @@ public class Main {
         if (streetTemperature <= 5) {
             System.out.println("На улице сегодня " + streetTemperature + " градуса/ов, нужно надеть шапку");
         }
-        if (streetTemperature > 5) {
+        else  {
             System.out.println("На улице сегодня " + streetTemperature + " градусов, можно идти без шапки");
         }
         System.out.println("_____");
@@ -63,7 +63,7 @@ public class Main {
         if (childAge > 5 && childAge < 14) {
             System.out.println("Если возраст ребенка равен " + childAge + " лет, то ему можно кататься на аттракционе в сопровождении взрослого");
         }
-        if (childAge > 14) {
+        if (childAge >= 14) {
             System.out.println("Если возраст ребенка равен " + childAge + " лет, то ему можно кататься на аттракционе без сопровождения взрослого");
         }
         System.out.println("_____");
@@ -71,24 +71,12 @@ public class Main {
 
 
         System.out.println("Задача 6");
-        // Условие задачи:
-        //  Вместимость одного вагона поезда — 102 человека. Вагон рассчитан на 60 сидячих мест,
-        //  все остальные — стоячие.
-        //  С помощью условного оператора и конструкции else напишите программу,
-        //  которая выводит в консоль сообщение о том, есть ли место в вагоне,
-        //  сидячее или стоячее, или вагон уже полностью забит.
-
-        // Условие задачи неполное. Не дано:
-        //  а) есть ли разница в стоимости сидячего и стоячего места
-        //  б) продаются ли билеты сначала на сидячие места и только потом на стоячие
-        //  Поэтому задача решалась исходя из условия, что билеты продавались сначала на сидячие места
-        //  и только потом - на стоячие.
         int carriageCapacity = 102;
         int seatingPlaces = 60;
         int standingPlaces = carriageCapacity - seatingPlaces;
         int remaininSeatingplases;
         int remainingStandingplases;
-        int passengerNumber = 54; // В зависимости от вводимого числа результат будет разный
+        int passengerNumber = 54;
 
         if (passengerNumber < carriageCapacity && passengerNumber < seatingPlaces) {
             remaininSeatingplases = seatingPlaces - passengerNumber;
